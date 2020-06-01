@@ -2,7 +2,7 @@ import streamlit as st
 
 from textblob import TextBlob
 
-import pdftotext
+#import pdftotext
 
 import pandas as pd
 
