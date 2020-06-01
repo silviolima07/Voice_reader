@@ -72,13 +72,11 @@ def carregar_texto(type):
         return file   
 
 
-def convert(file, blob):
-    dict_idioma_full = lista_idiomas_full()
-    idioma_original = get_value(blob.detect_language(),dict_idioma_full)
-    original_key = get_key(idioma_original, dict_idioma_full)
- 
+def convert(dict_idioma,blob):
     try:
         dict_idioma_full = lista_idiomas_full()
+      
+        #st.write(dict_idioma)
             
         #idioma_original = get_value(blob.detect_language(),dict_idioma_full)
         #original_key = get_key(idioma_original, dict_idioma_full)
@@ -87,23 +85,22 @@ def convert(file, blob):
         #play(file.getvalue(),original_key)
             
         #dict_idioma = lista_idiomas(idioma_original)
-        options = st.multiselect("Choose a language", tuple(dict_idioma.values()))
+        options = st.radio("Choose a language", tuple(dict_idioma.values()))
                     
         #idioma_final = get_key(idioma_original, dict_idioma)
-                       
-        for i in range(len(options)):
-            value = options[i]
-            idioma_final_key = get_key(value, dict_idioma)
-            try:
-                if (idioma_original != idioma_final_key):
-                    texto_convertido = str(blob.translate(to=idioma_final_key))
-                    st.success("Language"+": "+ value + " ("+idioma_final_key+")")
-                    #st.write(texto_convertido)
+        #st.subheader(options)               
+        value = options
+        idioma_final_key = get_key(value, dict_idioma)
+        #st.subheader(idioma_final_key)
+        try:
+            texto_convertido = str(blob.translate(to=idioma_final_key))
+            st.success("Language"+": "+ value + " ("+idioma_final_key+")")
+            st.subheader(texto_convertido)
                                 #st.text(idioma_final_key)
-                    play(texto_convertido,idioma_final_key)
+            play(texto_convertido,idioma_final_key)
                         
-            except:
-                st.error("ERROR: some languages will fail to play the sound.")
+        except:
+            st.error("ERROR: some languages will fail to play the sound.")
     except:
         st.error("ERROR: some languages will fail to play the sound.")
 
@@ -136,15 +133,19 @@ def main():
         
     if choice == 'TXT':
         #try:
-            #file = carregar_texto('txt')
-            #blob= TextBlob(file.getvalue())
-        blob = TextBlob("Teste com apenas uma frase de texto")
+        file = carregar_texto('txt')
+        blob= TextBlob(file.getvalue())
+        #blob = TextBlob("Teste com apenas uma frase de texto")
+        dict_idioma_full = lista_idiomas_full()
+        idioma_original = get_value(blob.detect_language(),dict_idioma_full)
+        original_key = get_key(idioma_original, dict_idioma_full)
+        dict_idioma = lista_idiomas(idioma_original)
         st.markdown(blob)
-        teste=str(blob.translate(to='en'))
-        st.write(teste)
-        play(teste,'en')
+        #teste=str(blob.translate(to='en'))
+        #st.write(teste)
+        play(file.getvalue(),original_key)
          
-            #convert(file, blob)
+        convert(dict_idioma, blob)
                           
         #except:
         #    st.warning("TXT please")
