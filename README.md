@@ -1,2 +1,2 @@
-# Voice_reader
-Read files and speak.
+# TextBlob_voice
+Read files.
