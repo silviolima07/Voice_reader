@@ -66,6 +66,7 @@ def carregar_texto(type):
         file = st.file_uploader("Carregue um arquivo de texto", type=[type])
         if file is not None:
        	    st.success("Arquivo carregado, obrigado")
+            Flag=True
         else:
             st.write("Um arquivo tipo "+type+" pequeno, por favor.")
 
@@ -112,6 +113,7 @@ def main():
    
     activities = ["Home","PDF","TXT","About"]
     choice = st.sidebar.radio("Home",activities)
+    Flag=False
 
     if choice == 'Home':
         st.write("Only files:")
@@ -132,23 +134,36 @@ def main():
 
         
     if choice == 'TXT':
-        #try:
-        file = carregar_texto('txt')
-        blob= TextBlob(file.getvalue())
-        #blob = TextBlob("Teste com apenas uma frase de texto")
-        dict_idioma_full = lista_idiomas_full()
-        idioma_original = get_value(blob.detect_language(),dict_idioma_full)
-        original_key = get_key(idioma_original, dict_idioma_full)
-        dict_idioma = lista_idiomas(idioma_original)
-        st.markdown(blob)
-        #teste=str(blob.translate(to='en'))
-        #st.write(teste)
-        play(file.getvalue(),original_key)
+        try:
+            file = carregar_texto('txt')
+            blob= TextBlob(file.getvalue())
+            dict_idioma_full = lista_idiomas_full()
+            idioma_original = get_value(blob.detect_language(),dict_idioma_full)
+            original_key = get_key(idioma_original, dict_idioma_full)
+            dict_idioma = lista_idiomas(idioma_original)
+            st.markdown(blob)
+            play(file.getvalue(),original_key)
          
-        convert(dict_idioma, blob)
+            convert(dict_idioma, blob)
                           
-        #except:
-        #    st.warning("TXT please")
+        except:
+            st.warning("TXT please")
+
+    if choice == 'About':
+        st.subheader("I hope you enjoy it and use to learn something")
+        st.subheader("Built with Streamlit and Textblob")
+        st.write("Problems:")
+        st.write(" - sometimes the original language can't be correctly detected")
+        st.write(" - sometimes the sound will fail.")
+        st.subheader("by Silvio Lima")
+        
+        if st.button("Linkedin"):
+            js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
+            html = '<img src onerror="{}">'.format(js)
+            div = Div(text=html)
+            st.bokeh_chart(div)
+
+
 
 if __name__ == '__main__':
     main()
