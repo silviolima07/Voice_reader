@@ -45,16 +45,15 @@ pandas==1.0.4
 pandocfilters==1.4.2
 parso==0.7.0
 pathtools==0.1.2
+pdftotext==2.1.4
 pexpect==4.8.0
 pickleshare==0.7.5
 Pillow==7.1.2
 pkg-resources==0.0.0
-playsound==1.2.2
 prometheus-client==0.8.0
 prompt-toolkit==3.0.5
 protobuf==3.12.2
 ptyprocess==0.6.0
-PyAudio==0.2.11
 pydeck==0.3.1
 Pygments==2.6.1
 pyparsing==2.4.7
@@ -69,7 +68,6 @@ s3transfer==0.3.3
 Send2Trash==1.5.0
 six==1.15.0
 soupsieve==2.0.1
-SpeechRecognition==3.8.1
 streamlit==0.60.0
 terminado==0.8.3
 testpath==0.4.4
@@ -84,7 +82,7 @@ tzlocal==2.1
 urllib3==1.25.9
 validators==0.15.0
 watchdog==0.10.2
-wcwidth==0.1.9
+wcwidth==0.2.0
 webencodings==0.5.1
 widgetsnbextension==3.5.1
 zipp==3.1.0
