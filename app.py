@@ -135,17 +135,19 @@ def main():
 
         
     if choice == 'TXT':
-        try:
-            file = carregar_texto('txt')
-            blob= TextBlob(file.getvalue())
-            st.markdown(blob)
-            #teste=str(blob.translate(to=en))
-            st.write(teste)
+        #try:
+            #file = carregar_texto('txt')
+            #blob= TextBlob(file.getvalue())
+        blob = TextBlob("Teste com apenas uma frase de texto")
+        st.markdown(blob)
+        teste=str(blob.translate(to='en'))
+        st.write(teste)
+        play(teste,'en')
          
-            convert(file, blob)
+            #convert(file, blob)
                           
-        except:
-            st.warning("TXT please")
+        #except:
+        #    st.warning("TXT please")
 
 if __name__ == '__main__':
     main()
