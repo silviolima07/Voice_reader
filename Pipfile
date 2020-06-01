@@ -11,6 +11,7 @@ streamlit = "==0.60.0"
 textblob = "*"
 gtts = "*"
 bokeh = "*"
+pdftotext = "*"
 
 [requires]
 python_version = "3.6"
