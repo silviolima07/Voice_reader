@@ -4,6 +4,8 @@ from textblob import TextBlob
 
 #import pdftotext
 
+from PIL import Image
+
 import pandas as pd
 
 # Audio
@@ -109,7 +111,18 @@ def main():
     
     """Ouça e Fale App """
     
-    st.title("Reader & Voice")
+    #st.title("Reader & Voice")
+
+
+    html_page = """
+    <div style="background-color:tomato;padding=50px">
+        <p style='text-align:center;font-size:50px;font-weight:bold'>Reader & Voice</p>
+    </div>
+              """
+    st.markdown(html_page, unsafe_allow_html=True)
+
+    image = Image.open("reader.png")
+    st.sidebar.image(image,caption="", use_column_width=True)
    
     activities = ["Home","PDF","TXT","About"]
     choice = st.sidebar.radio("Home",activities)
