@@ -1,9 +1,8 @@
 import streamlit as st
-#import speech_recognition as sr
 
 from textblob import TextBlob
 
-import pdftotext
+#import pdftotext
 
 import pandas as pd
 
@@ -124,15 +123,15 @@ def main():
         st.markdown("### English, Spanish, French, Italian, Japanese, Russian  and Chinese")
         
     if choice == 'PDF':
-        
-        file = carregar_texto('pdf')
-        pdf = pdftotext.PDF(file)
+        st.subheader("Under construction")
+        #file = carregar_texto('pdf')
+        #pdf = pdftotext.PDF(file)
             #for page in pdf:
             #    st.text(page)
             
-        blob = TextBlob(pdf[0])
-        st.text(blob)
-        st.write(blob.detect_language())
+        #blob = TextBlob(pdf[0])
+        #st.text(blob)
+        #st.write(blob.detect_language())
 
         
     if choice == 'TXT':
