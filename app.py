@@ -139,10 +139,10 @@ def main():
             file = carregar_texto('txt')
             blob= TextBlob(file.getvalue())
             st.markdown(blob)
-            teste=str(blob.translate(to=en))
+            #teste=str(blob.translate(to=en))
             st.write(teste)
          
-            #convert(file, blob)
+            convert(file, blob)
                           
         except:
             st.warning("TXT please")
