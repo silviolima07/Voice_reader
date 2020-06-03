@@ -4,7 +4,7 @@ from textblob import TextBlob
 
 import pdftotext
 #import PyPDF2
-#import slate3k as slate
+
 
 from PIL import Image
 
