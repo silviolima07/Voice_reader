@@ -2,9 +2,9 @@ import streamlit as st
 
 from textblob import TextBlob
 
-#import pdftotext
-import PyPDF2
-
+import pdftotext
+#import PyPDF2
+#import slate3k as slate
 
 from PIL import Image
 
@@ -139,11 +139,14 @@ def main():
     if choice == 'PDF':
         st.subheader("Under construction")
         #file = carregar_texto('pdf')
-        #pdf = pdftotext.PDF(file)
+        #pdfFile = open(file,'rb')
+        #pdf = PyPDF2.PdfFileReader(pdfFile)
+        #with open(file, 'rb') as f:
+        #    doc = slate,PDF(f)
             #for page in pdf:
             #    st.text(page)
-            
-        #blob = TextBlob(pdf[0])
+        #st.text(doc)    
+        #blob = TextBlob(pdf.getPage())
         #st.text(blob)
         #st.write(blob.detect_language())
 
