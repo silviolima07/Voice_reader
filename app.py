@@ -3,6 +3,8 @@ import streamlit as st
 from textblob import TextBlob
 
 #import pdftotext
+import PyPDF2
+
 
 from PIL import Image
 
