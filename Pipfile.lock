@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "835661a59a3b038f9a7c23b594f96d47ba557a045ec62cd13e13e50f042e1091"
+            "sha256": "12a248e63faa54ea63e1a4955c1334ff6d7cbfa8771c9dbca159244a1b5c2f22"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -451,6 +451,13 @@
             ],
             "version": "==0.1.2"
         },
+        "pdftotext": {
+            "hashes": [
+                "sha256:d37864049581fb13cdcf7b23d4ea23dac7ca2e9c646e8ecac1a39275ab1cae03"
+            ],
+            "index": "pypi",
+            "version": "==2.1.4"
+        },
         "pexpect": {
             "hashes": [
                 "sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937",
@@ -566,13 +573,6 @@
             ],
             "index": "pypi",
             "version": "==2.4.7"
-        },
-        "pypdf2": {
-            "hashes": [
-                "sha256:e28f902f2f0a1603ea95ebe21dff311ef09be3d0f0ef29a3e44a932729564385"
-            ],
-            "index": "pypi",
-            "version": "==1.26.0"
         },
         "pyrsistent": {
             "hashes": [

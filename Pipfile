@@ -89,7 +89,7 @@ Pillow = "==7.1.2"
 Pygments = "==2.6.1"
 PyYAML = "==5.3.1"
 Send2Trash = "==1.5.0"
-pdftotext = "*"
+pdftotext = "==2.1.4"
 
 [requires]
 python_version = "3.6"
