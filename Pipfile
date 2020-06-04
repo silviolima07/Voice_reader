@@ -6,6 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+streamlit = "*"
+textblob = "*"
+bokeh = "*"
 
 [requires]
 python_version = "3.6"
