@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9ad84f92e5bdee9c655746f65f7968c7eb93a228a0dc0aedaeb7db5fdbef9eb9"
+            "sha256": "415dfdcb118dd9bdfef17671cb7dcd78dbd69b6ae7d4f39e8b44e71d60ca72e7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -15,14 +15,6 @@
             }
         ]
     },
-    "default": {
-        "pdftotext": {
-            "hashes": [
-                "sha256:d37864049581fb13cdcf7b23d4ea23dac7ca2e9c646e8ecac1a39275ab1cae03"
-            ],
-            "index": "pypi",
-            "version": "==2.1.4"
-        }
-    },
+    "default": {},
     "develop": {}
 }
