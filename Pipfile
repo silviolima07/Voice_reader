@@ -7,12 +7,11 @@ verify_ssl = true
 
 [packages]
 streamlit = "*"
-textblob = "*"
 bokeh = "*"
 gtts = "*"
 spacy = "*"
-pt = "*"
-skip-lock = "*"
+pt-core-news-sm = "*"
+image = "*"
 
 [requires]
 python_version = "3.6"
