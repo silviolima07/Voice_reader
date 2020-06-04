@@ -9,9 +9,10 @@ verify_ssl = true
 streamlit = "*"
 textblob = "*"
 bokeh = "*"
-spacy = "*"
 gtts = "*"
+spacy = "*"
 pt-core-news-sm = "*"
+
 
 [requires]
 python_version = "3.6"
