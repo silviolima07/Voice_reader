@@ -84,9 +84,6 @@ def convert(dict_idioma,blob):
         dict_idioma_full = lista_idiomas_full()
       
         #st.write(dict_idioma)
-            
-        #idioma_original = get_value(blob.detect_language(),dict_idioma_full)
-        #original_key = get_key(idioma_original, dict_idioma_full)
                     
         #st.success("Original Language"+":  "+ idioma_original + " ("+original_key+")")
         #play(file.getvalue(),original_key)

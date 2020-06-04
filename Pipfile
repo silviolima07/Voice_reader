@@ -11,6 +11,7 @@ textblob = "*"
 bokeh = "*"
 spacy = "*"
 gtts = "*"
+pt-core-news-sm = "*"
 
 [requires]
 python_version = "3.6"
