@@ -12,6 +12,7 @@ gtts = "*"
 spacy = "*"
 pt-core-news-sm = "*"
 image = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.6"
