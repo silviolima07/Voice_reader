@@ -24,7 +24,6 @@ Django==3.0.7
 docutils==0.15.2
 docx2txt==0.8
 EbookLib==0.17.1
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.2.5/en_core_web_sm-2.2.5.tar.gz
 entrypoints==0.3
 enum-compat==0.0.3
 extract-msg==0.23.1
