@@ -90,6 +90,10 @@ Pygments = "==2.6.1"
 PyYAML = "==5.3.1"
 Send2Trash = "==1.5.0"
 pdftotext = "==2.1.4"
+tika = "*"
+spacy = "*"
+collections = "*"
+en-core-web-sm = "*"
 
 [requires]
 python_version = "3.6"

@@ -3,7 +3,9 @@ import streamlit as st
 from textblob import TextBlob
 
 import pdftotext
-#import PyPDF2
+
+import spacy
+from spacy import displacy
 
 
 from PIL import Image
@@ -126,18 +128,31 @@ def main():
     image = Image.open("reader.png")
     st.sidebar.image(image,caption="", use_column_width=True)
    
-    activities = ["Home","PDF","TXT","About"]
+    activities = ["Home","TXT", 'Spacy',"About"]
     choice = st.sidebar.radio("Home",activities)
     Flag=False
 
     if choice == 'Home':
-        st.write("Only files:")
-        st.markdown("### PDF or TXT")
+        #st.write("Files:")
+        st.markdown("### Files -> .txt")
         st.write("After uploading you can convert to 7 languages")
         st.markdown("### English, Spanish, French, Italian, Japanese, Russian  and Chinese")
         
-    if choice == 'PDF':
-        st.subheader("Under construction")
+    if choice == 'Spacy':
+        nlp = spacy.load('pt')
+        sentence_nlp = nlp("Hermione é uma ferramenta de desenvolvimento de projetos de ciencia de dados.")
+        st.text([(word, word.ent_type_) for word in sentence_nlp if word.ent_type_])
+        displacy.render(sentence_nlp, style='ent', jupyter=True)
+        
+    #    file = carregar_texto('')
+    #    file = '/media/silvio/SILVIOLIMA/SilvioCesarDeLima.pdf'
+        #st.text(file)
+    #    raw = parser.from_file(file)
+    #    text = raw['content']
+    #    st.text(text)
+        #text = textract.process(str(file))
+        #st.text(text)
+    #    st.subheader("Under construction")
         #file = carregar_texto('pdf')
         #pdfFile = open(file,'rb')
         #pdf = PyPDF2.PdfFileReader(pdfFile)
@@ -169,6 +184,7 @@ def main():
 
     if choice == 'About':
         st.subheader("I hope you enjoy it and use to learn something")
+        st.subheader("For while only txt files")
         st.subheader("Built with Streamlit and Textblob")
         st.write("Problems:")
         st.write(" - sometimes the original language can't be correctly detected")
