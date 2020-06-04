@@ -10,8 +10,8 @@ streamlit = "*"
 textblob = "*"
 bokeh = "*"
 gtts = "*"
-spacy = "*"
-pt-core-news-sm = "*"
+spacy = "2.2.2"
+pt-core-news-sm = "2.2.5"
 
 
 [requires]
