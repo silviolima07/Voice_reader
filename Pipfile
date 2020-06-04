@@ -9,6 +9,7 @@ verify_ssl = true
 streamlit = "*"
 textblob = "*"
 bokeh = "*"
+spacy = "*"
 
 [requires]
 python_version = "3.6"
