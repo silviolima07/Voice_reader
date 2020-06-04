@@ -10,9 +10,9 @@ streamlit = "*"
 textblob = "*"
 bokeh = "*"
 gtts = "*"
-spacy = "2.2.2"
-pt-core-news-sm = "2.2.5"
-
+spacy = "*"
+pt = "*"
+skip-lock = "*"
 
 [requires]
 python_version = "3.6"
