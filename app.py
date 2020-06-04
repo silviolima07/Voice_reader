@@ -7,7 +7,7 @@ from textblob import TextBlob
 import spacy
 from spacy import displacy
 
-import pt_core_news_sm
+#import pt_core_news_sm
 
 
 from PIL import Image
